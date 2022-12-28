@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %} 
+  users 
+{% endblock %}
+
+{% block content %}
+  {% for user in users %} 
+    <div>{{ user.name }}, age: {{ user.age }} toplist: 
+      <ol>
+      {% if user.top_list %}
+        {% for place in user.top_list.burger_places.all %}
+          <li>{{ place.name }}, found at: {{ place.location }}</li>
+        {% endfor %}
+      {% endif %}
+    </ol>
+    </div>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %} 
+  Places
+{% endblock %}
+
+{% block content %}
+
+{% for place in places%}
+
+  <div> 
+    <h3>{{ place.name }}</h3>
+  <b>{{ place.location }}</b>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+    
+
