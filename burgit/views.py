@@ -24,4 +24,7 @@ def places(request):
   }
   return HttpResponse(template.render(context, request))
 
+def test(request):
+  return HttpResponse('yo')
+
 
