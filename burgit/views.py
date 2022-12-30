@@ -23,3 +23,6 @@ def places(request):
     'places': places
   }
   return HttpResponse(template.render(context, request))
+
+def sayHi():
+  return HttpResponse('Hi!')
